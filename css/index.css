@@ -1,0 +1,409 @@
+@font-face {
+   font-family: 'Angel\ wish';
+   src: url('/font/Angel\ wish.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+}
+
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   height: 100vh;
+   background-image: 
+   /* linear-gradient(rgba(79, 79, 79, 0.5), rgba(50, 50, 50, 0.5)), */
+      /* 투명도 조절 레이어 */ url('https://i.pinimg.com/564x/c9/2d/ca/c92dcad8b1822fc51e9f074891fb834f.jpg');
+   position: relative;
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+}
+
+body::before {
+   content: '';
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   background-color: rgba(0, 0, 0, 0.2); /* 투명도를 낮추어 배경 이미지가 보이도록 */
+   z-index: -1;
+   animation: flicker 3s infinite, noise-anim 0.5s infinite;
+   pointer-events: none;
+   mix-blend-mode: overlay; /* 배경 이미지와 블렌딩하여 자연스럽게 보이도록 설정 */
+}
+
+/* 배경 글리치 */
+@keyframes blinker {
+   50% {
+      opacity: 0;
+   }
+}
+
+@keyframes flicker {
+   0% {
+      opacity: 0.18382489;
+   }
+   5% {
+      opacity: 0.34270544;
+   }
+   10% {
+      opacity: 0.96586561;
+   }
+   15% {
+      opacity: 0.72077474;
+   }
+   20% {
+      opacity: 0.2364895;
+   }
+   25% {
+      opacity: 0.70936118;
+   }
+   30% {
+      opacity: 0.00409007;
+   }
+   35% {
+      opacity: 0.65961344;
+   }
+   40% {
+      opacity: 0.50734813;
+   }
+   45% {
+      opacity: 0.88146788;
+   }
+   50% {
+      opacity: 0.0465525;
+   }
+   55% {
+      opacity: 0.33315262;
+   }
+   60% {
+      opacity: 0.36203894;
+   }
+   65% {
+      opacity: 0.68575812;
+   }
+   70% {
+      opacity: 0.77522172;
+   }
+   75% {
+      opacity: 0.75757868;
+   }
+   80% {
+      opacity: 0.60799146;
+   }
+   85% {
+      opacity: 0.77076662;
+   }
+   90% {
+      opacity: 0.90846953;
+   }
+   95% {
+      opacity: 0.02312783;
+   }
+   100% {
+      opacity: 0.15431698;
+   }
+}
+
+@keyframes noise-anim {
+   0% {
+      clip: rect(22.44823268px, 9999px, 73.79128709px, 0);
+   }
+   5% {
+      clip: rect(42.30352551px, 9999px, 27.32921895px, 0);
+   }
+   10% {
+      clip: rect(57.30396653px, 9999px, 80.26509898px, 0);
+   }
+   15% {
+      clip: rect(55.88441365px, 9999px, 89.56866544px, 0);
+   }
+   20% {
+      clip: rect(44.05307756px, 9999px, 44.94895404px, 0);
+   }
+   25% {
+      clip: rect(7.36838614px, 9999px, 14.01104453px, 0);
+   }
+   30% {
+      clip: rect(25.36446052px, 9999px, 49.9117913px, 0);
+   }
+   35% {
+      clip: rect(87.47788161px, 9999px, 71.86426963px, 0);
+   }
+   40% {
+      clip: rect(52.35510191px, 9999px, 79.57608745px, 0);
+   }
+   45% {
+      clip: rect(19.75247788px, 9999px, 3.19825808px, 0);
+   }
+   50% {
+      clip: rect(26.44725182px, 9999px, 33.90629622px, 0);
+   }
+   55% {
+      clip: rect(81.48044688px, 9999px, 68.62622297px, 0);
+   }
+   60% {
+      clip: rect(13.0903138px, 9999px, 57.84348416px, 0);
+   }
+   65% {
+      clip: rect(34.13183648px, 9999px, 2.96441845px, 0);
+   }
+   70% {
+      clip: rect(44.74444713px, 9999px, 53.56984752px, 0);
+   }
+   75% {
+      clip: rect(1.38305152px, 9999px, 68.96367163px, 0);
+   }
+   80% {
+      clip: rect(56.76012886px, 9999px, 26.50887382px, 0);
+   }
+   85% {
+      clip: rect(87.27210103px, 9999px, 74.56381647px, 0);
+   }
+   90% {
+      clip: rect(45.37655789px, 9999px, 75.44809691px, 0);
+   }
+   95% {
+      clip: rect(31.65053908px, 9999px, 62.34137042px, 0);
+   }
+   100% {
+      clip: rect(16.022086px, 9999px, 45.87412502px, 0);
+   }
+}
+
+.crew {
+   font-family: 'Angel\ wish', sans-serif;
+   color: #484646;
+   position: relative;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+   font-size: 70px;
+   margin-bottom: -70px;
+}
+
+.title {
+   font-family: 'Angel\ wish', sans-serif;
+   color: #ddd;
+   position: relative;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+   font-size: 150px;
+   margin: 0;
+   margin-top: 70px;
+}
+/* navbar 스타일 */
+.navbar {
+   display: flex;
+   justify-content: center;
+   padding: 10px 20px;
+   border-radius: 5px;
+   z-index: 2;
+   position: relative;
+   gap: 30px;
+   font-family: 'Pirata One', system-ui;
+   font-size: 25px;
+   margin-top: 70px;
+   margin-bottom: 200px;
+}
+
+.navbox {
+   width: 100px;
+   height: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: rgba(255, 255, 255, 0.1);
+   border-radius: 5px;
+   perspective: 1000px;
+}
+
+.nav-link {
+   color: #fff;
+   text-decoration: none;
+   font-weight: bold;
+   transition: transform 0.6s;
+   transform-style: preserve-3d;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   height: 100%;
+   backface-visibility: hidden;
+}
+
+.nav-link::before {
+   content: attr(data-text);
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(255, 255, 255, 0.2);
+   color: #ddd;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 5px;
+   backface-visibility: hidden;
+   transform: rotateY(180deg);
+}
+
+/* 클릭 시 뒤집히는 효과 */
+.nav-link.flipped {
+   transform: rotateY(180deg);
+}
+
+.music {
+   text-align: center;
+   padding-top: 20px;
+   height: auto;
+   width: 100vw;
+   margin-bottom: 300px;
+}
+
+.music_title {
+   font-family: 'Angel\ wish', sans-serif;
+   color: #ddd;
+   font-size: 70px;
+   font-weight: bold;
+   margin: 0;
+   padding: 10px;
+   margin-bottom: 100px;
+}
+
+.album_container {
+   display: flex;
+   justify-content: center;
+   gap: 100px;
+   margin-top: 20px;
+}
+
+.album {
+   cursor: pointer;
+}
+
+.album img {
+   width: 300px;
+   height: 300px;
+   object-fit: cover;
+   border-radius: 8px;
+}
+
+.album_title {
+   color: white;
+   font-size: 25px;
+}
+
+.visuals {
+   width: 100vw;
+   height: 900px;
+   text-align: center;
+   margin-bottom: 300px;
+}
+.visuals_title {
+   font-family: 'Angel\ wish', sans-serif;
+   color: #ddd;
+   font-size: 70px;
+   font-weight: bold;
+   margin: 0;
+   padding: 10px;
+   margin-bottom: 100px;
+}
+
+.video-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 20px;
+   gap: 70px;
+}
+.video-container2 {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 100px;
+   gap: 70px;
+}
+.contact {
+   width: 100vw;
+   height: 500px;
+   text-align: center;
+   margin-bottom: 300px;
+}
+.contact_title {
+   font-family: 'Angel\ wish', sans-serif;
+   color: #ddd;
+   font-size: 70px;
+   font-weight: bold;
+   margin: 0;
+   padding: 10px;
+   margin-bottom: 100px;
+}
+.shop {
+   width: 100vw;
+   height: 900px;
+   text-align: center;
+}
+.shop_title {
+   font-family: 'Angel\ wish', sans-serif;
+   color: #ddd;
+   font-size: 70px;
+   font-weight: bold;
+   margin: 0;
+   padding: 10px;
+   margin-bottom: 100px;
+}
+
+.goTop {
+   width: 60px;
+   height: 60px;
+   position: fixed;
+   bottom: 50px;
+   right: 50px;
+   border: 2px solid white;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: rgba(0, 0, 0, 0.5);
+   z-index: 1000;
+}
+
+.goTopClick {
+   text-decoration: none;
+   color: white;
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   height: 100%;
+   font-size: 20px;
+}
+
+footer {
+   width: 100vw;
+   height: auto;
+   text-align: center;
+   padding: 30px;
+}
+footer .link i {
+   color: white;
+   font-size: 30px;
+   margin-bottom: 30px;
+   margin-right: 30px;
+}
+footer .link i:hover {
+   color: #838383;
+   transition: 0.3s;
+}
+footer .copyright {
+   color: #838383;
+   font-size: 30px;
+   margin-left: -20px;
+   font-family: 'Angel\ wish', sans-serif;
+}
