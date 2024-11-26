@@ -36,19 +36,19 @@ Cwar Site는 국내 힙합 아티스트의 음악, 활동, 소식을 팬들과 �
 
 ## 📁 프로젝트 구조
 
-Cwar_site/
-├── css/
-│   ├── album.css
-│   └── index.css
-├── font/
-│   ├── Angel wish.ttf
-│   └── CloisterBlack.ttf
-├── html/
-│   ├── album.html
-│   └── index.html
-├── js/
-│   └── index.js
-└── README.md
+	Cwar_site/
+	├── css/
+	│   ├── album.css
+	│   └── index.css
+	├── font/
+	│   ├── Angel wish.ttf
+	│   └── CloisterBlack.ttf
+	├── html/
+	│   ├── album.html
+	│   └── index.html
+	├── js/
+	│   └── index.js
+	└── README.md
 
 
 ## 🚀 로컬 실행 방법
