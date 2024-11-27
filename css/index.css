@@ -1,6 +1,6 @@
 @font-face {
    font-family: 'Angel\ wish';
-   src: url('/font/Angel\ wish.ttf') format('truetype');
+   src: url('../font/Angel\ wish.ttf') format('truetype');
    font-weight: normal;
    font-style: normal;
 }
